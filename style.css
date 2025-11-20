@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #513252;
+    background-color: #2a1e3f; /* Slightly darker for cleaner look */
     height: 100vh;
     display: flex;
     align-items: center;
@@ -27,6 +27,7 @@ img {
     color: #eee;
 }
 
+/* Header */
 .header {
     display: flex;
     align-items: center;
@@ -35,14 +36,12 @@ img {
 
 .header h3 {
     font-style: italic;
-    font-size: 30px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffd369;  /* Changed to highlight your project name */
 }
 
-.mode {
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
+/* Search Section */
 .search-section {
     margin: 20px 0;
     display: flex;
@@ -77,21 +76,23 @@ img {
     padding: 15px 20px;
 }
 
+/* GitHub Info Card */
 .github {
     padding: 25px;
     display: grid;
     grid-template-columns: 1fr 3fr;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.13);
     box-shadow: 0 4px 30px rgba(0, 0, 200, 0.2);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .profile-picture {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
+    border: 3px solid #ffd369; /* Added highlight */
 }
 
 .info {
@@ -99,38 +100,43 @@ img {
 }
 
 .name {
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffd369; /* Highlight your name */
     padding-top: 15px;
     padding-bottom: 5px;
 }
 
 .login {
     color: #ccc;
+    font-weight: 500;
 }
 
 .bio {
     padding: 15px 0;
+    font-weight: 500;
 }
 
+/* Stats Section */
 .d-grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
     padding: 15px;
-    background-color: rgba(32, 23, 39, 0.8);
+    background-color: rgba(32, 23, 39, 0.85);
     border-radius: 10px;
-    
 }
 
 .repos-number,
 .follower-number,
 .following-number {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 25px;
     padding-top: 5px;
+    color: #ffd369;
 }
 
+/* Location + Company */
 .d-grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -157,18 +163,20 @@ img {
     left: 20px;
 }
 
+/* Error Box */
 .error {
     display: none;
     padding: 25px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 30px rgba(0, 0, 200, 0.2);
+    background: rgba(255, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(200, 0, 0, 0.3);
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 0, 0, 0.4);
     text-align: center;
     font-size: 25px;
 }
 
+/* Responsive */
 @media (max-width: 650px) {
     .github {
         padding: 15px;
@@ -177,5 +185,9 @@ img {
 
     .github img {
         margin: 0 auto;
+    }
+
+    .header h3 {
+        font-size: 28px;
     }
 }
